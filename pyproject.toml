@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "data-extractor"
+version = "0.1.0"
+description = ""
+authors = ["Titiphon Phunmongkon <138745672+EXer07@users.noreply.github.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+selenium = "^4.12.0"
+pydantic = "^2.3.0"
+pyyaml = "^6.0.1"
+pandas = "^2.1.0"
+xlsxwriter = "^3.1.2"
+# Forest ttk theme included in code: https://github.com/rdbende/Forest-ttk-theme
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^5.13.2"
+isort = "^5.12.0"
+black = "^23.7.0"
+pyright = "^1.1.326"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+reportUnknownVariableType = "error"
+reportMissingTypeStubs = "information"
+
+# In strict, but don't show these errors
+reportUnusedImport = "none"
+reportUnusedVariable = "none"
+reportUnusedFunction = "none"
+reportUnknownMemberType = "error"
+
+
+# Not in strict, but show these errors
+# reportMissingSuperCall = "error"
+reportCallInDefaultInitializer = "error"
+reportImplicitOverride = "information"
+reportImplicitStringConcatenation = "error"
+reportPropertyTypeMismatch = "error"
+reportShadowedImports = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnnecessaryTypeIgnoreComment = "information"
